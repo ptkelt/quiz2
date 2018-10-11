@@ -21,9 +21,17 @@
 
 using namespace std;
 
+
+
 // This function displays the menu and returns the user's choice
 int menu();
 
+/**
+* @file collegemain.cc
+* @param ins: Gets input from stream ins
+* @brief 1: This is the main file that runs the program
+* @brief 2: This main file utilizies course.h, node.h, and college.h
+*/
 int main(){
     int choice;
     course c;

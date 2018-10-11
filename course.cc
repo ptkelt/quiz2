@@ -14,8 +14,15 @@ course::course(){
     hours = 0.0;
 }
 
+/**
+* @file course.h
+* @param ins: Gets input from stream ins
+* @brief 1: Inputs from keyboard if ins is cin
+* @brief 2: Inputs from file if else
+*/
+
 void course::input(std::istream& ins){
-    if(ins == cin){
+    if(&ins == &cin){
 	cout<<"Course Number: ";
 	if(ins.peek() == '\n') ins.ignore();
     	getline(ins, course_number);
@@ -39,8 +46,14 @@ void course::input(std::istream& ins){
     }
 }
 
+/**
+* @file course.h
+* @param outs: Gets input from stream ins
+* @brief 1: Outputs to terminal if outs is cout
+* @brief 2: Outputs to file if else
+*/
 void course::output(std::ostream& outs)const{
-    if(outs == cout){
+    if(&outs == &cout){
 	outs<<"Course Number:"<<course_number<<endl;
 	outs<<"Grade received:"<<grade<<endl;
 	outs<<"Credit hours:"<<setprecision(2)<<hours<<endl;
@@ -52,7 +65,11 @@ void course::output(std::ostream& outs)const{
       }
 }
 
-
+/**
+* @file course.h
+* @brief 1: Gets the GPA value for a particular grade
+* @brief 2: This doesn't rely on any parameters
+*/
 double course::get_number_grade()const{
     if(grade == "A") return 4.0;
     if(grade == "A-") return 3.667;

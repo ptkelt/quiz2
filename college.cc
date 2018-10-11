@@ -11,6 +11,12 @@
 #include<string>
 using namespace std;
 
+/**
+* @file college.h
+* @param s: Holds the given college name
+* @brief 1: Constructs college according to string s
+*/
+
 College::College(std::string s){
 	name = s;
 	head = NULL;
@@ -26,6 +32,11 @@ College::~College(){
 	}
 }
 
+/**
+* @file college.h
+* @param other: College class that is being copied
+* @brief 1: Constructs college class using a copy constructor
+*/
 College::College(const College& other){
 	if(other.head == NULL){
 		head = NULL;
@@ -43,7 +54,11 @@ College::College(const College& other){
 		}
 	}
 }
-
+/**
+* @file college.h
+* @param other: Holds the given college name
+* @brief 1: Sets an existing college class equal to an existing college
+*/
 College& College::operator =(const College& other){
 	if(this == &other){
 		return * this;
